@@ -28,7 +28,8 @@
 
 
 // // 즉시 실행 함수
-// ((num) => num ** 3)(2)
+// console.log((function(num) { return num ** 3 })(2))
+// console.log((num => num ** 3)(2))
 
 
 // Array 
