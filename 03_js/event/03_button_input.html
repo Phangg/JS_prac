@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .blue {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1></h1>
+  <button id="btn">클릭</button>
+  <input type="text">
+
+  <script>
+   
+    const btn = document.querySelector('#btn')
+    // btn 이 클릭 되면 함수 실행
+    btn.addEventListener('click', function() {
+      const h1Tag = document.querySelector('h1')
+      // 클래스 blue 토글
+      h1Tag.classList.toggle('blue')
+    })
+
+    // input
+    const input = document.querySelector('input')
+    // input 에 값 입력시 함수 실행
+    input.addEventListener('input', function (event) {
+      // h1 태그 선택
+      const h1Tag = document.querySelector('h1')
+      // input 값을 태그의 컨텐츠로 채우기
+      h1Tag.innerText = event.target.value
+    })
+
+  </script>
+  
+</body>
+</html>
